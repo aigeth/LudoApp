@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_Layout_Game"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/gameCardView"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:layout_constraintVertical_bias="0.0">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/gameProfilePic"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/download" />
+
+            <me.grantland.widget.AutofitTextView
+                android:id="@+id/gameUserFirstName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:maxLines="2"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:singleLine="true"
+                android:text="Aigeth"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/gameProfilePic"
+                app:layout_constraintStart_toStartOf="@+id/gameProfilePic"
+                app:layout_constraintTop_toBottomOf="@+id/gameProfilePic"
+                autofit:minTextSize="1sp" />
+
+            <me.grantland.widget.AutofitTextView
+                android:id="@+id/gameUserLastName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:maxLines="1"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="Magendran"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/gameUserFirstName"
+                app:layout_constraintStart_toStartOf="@+id/gameUserFirstName"
+                app:layout_constraintTop_toBottomOf="@+id/gameUserFirstName"
+                autofit:minTextSize="1sp" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>
